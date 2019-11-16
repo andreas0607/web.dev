@@ -1,5 +1,5 @@
 @import '../settings/type';
-
+@import '../tools/breakpoints';
 // =============================================================================
 // TABLES OVERVIEW
 //
@@ -19,8 +19,11 @@ table {
   border-collapse: collapse;
   font-size: inherit; // DevSite override
   margin: 0;
-  min-width: 512px;
+  min-width: auto;
   width: 100%;
+  @include bp(sm){
+    min-width: 512px;
+  }
 }
 
 tr {
